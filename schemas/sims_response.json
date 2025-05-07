@@ -1,0 +1,360 @@
+{
+    "title": "Sims Response",
+    "description": "Sims Response",
+    "type": "object",
+    "required": [
+        "data",
+        "links",
+        "meta"
+    ],
+    "properties": {
+        "data": {
+            "type": "array",
+            "description": "Array of SIMs",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "description": "ID of the SIM",
+                        "example": 254287
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "description": "Creation date of the SIM",
+                        "example": "2025-05-06 22:59:26"
+                    },
+                    "iccid": {
+                        "type": "string",
+                        "description": "ICCID of the SIM",
+                        "example": "894000000000087378"
+                    },
+                    "lpa": {
+                        "type": "string",
+                        "description": "LPA of the SIM",
+                        "example": "lpa.airalo.com"
+                    },
+                    "imsis": {
+                        "type": ["string", "null"],
+                        "description": "IMSI of the SIM",
+                        "example": "null"
+                    },
+                    "matching_id": {
+                        "type": ["string", "null"],
+                        "description": "Matching ID of the SIM",
+                        "example": "null"
+                    },
+                    "confirmation_code": {
+                        "type": ["string", "null"],
+                        "description": "Confirmation code of the SIM",
+                        "example": "null"
+                    },
+                    "qrcode": {
+                        "type": "string",
+                        "description": "QR code of the SIM",
+                        "example": "LPA:1$lpa.airalo.com$TEST"
+                    },
+                    "qrcode_url": {
+                        "type": "string",
+                        "description": "QR code URL of the SIM",
+                        "example": "https://sandbox.airalo.com/qr?expires=1832885966&id=290807&signature=5a5957a8cd49dde8f3fd967420fd14fdba717c3e32ae5cc90cfbb016a8f416a5"
+                    },
+                    "direct_apple_installation_url": {
+                        "type": "string",
+                        "description": "Direct Apple installation URL of the SIM",
+                        "example": "https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST"
+                    },
+                    "voucher_code": {
+                        "type": ["string", "null"],
+                        "description": "Voucher code of the SIM",
+                        "example": "null"
+                    },
+                    "airalo_code": {
+                        "type": ["string", "null"],
+                        "description": "Airalo code of the SIM",
+                        "example": "null"
+                    },
+                    "apn_type": {
+                        "type": "string",
+                        "description": "APN type of the SIM",
+                        "example": "manual"
+                    },
+                    "apn_value": {
+                        "type": ["string", "null"],
+                        "description": "APN value of the SIM",
+                        "example": "null"
+                    },
+                    "is_roaming": {
+                        "type": "boolean",
+                        "description": "Is roaming for the SIM",
+                        "example": true
+                    },
+                    "brand_settings_name": {
+                        "type": ["string", "null"],
+                        "description": "Brand settings name of the SIM",
+                        "example": "null"
+                    },
+                    "msisdn": {
+                        "type": ["string", "null"],
+                        "description": "MSISDN of the SIM",
+                        "example": "null"
+                    },
+                    "apn": {
+                        "type": "object",
+                        "description": "APN settings for iOS and Android",
+                        "properties": {
+                            "ios": {
+                                "type": "object",
+                                "properties": {
+                                    "apn_type": {
+                                        "type": "string",
+                                        "description": "APN type for iOS",
+                                        "example": "manual"
+                                    },
+                                    "apn_value": {
+                                        "type": "string",
+                                        "description": "APN value for iOS",
+                                        "example": "airalo2"
+                                    }
+                                }
+                            },
+                            "android": {
+                                "type": "object",
+                                "properties": {
+                                    "apn_type": {
+                                        "type": "string",
+                                        "description": "APN type for Android",
+                                        "example": "manual"
+                                    },
+                                    "apn_value": {
+                                        "type": "string",
+                                        "description": "APN value for Android",
+                                        "example": "null"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "simable": {
+                        "type": "object",
+                        "description": "SIM package details",
+                        "properties": {
+                            "id": {
+                                "type": "integer",
+                                "description": "ID of the SIM package",
+                                "example": 173607
+                            },
+                            "code": {
+                                "type": "string",
+                                "description": "Code of the SIM package",
+                                "example": "20250506-173607"
+                            },
+                            "package_id": {
+                                "type": "string",
+                                "description": "Package ID of the SIM package",
+                                "example": "merhaba-7days-1gb"
+                            },
+                            "currency": {
+                                "type": "string",
+                                "description": "Currency of the SIM package",
+                                "example": "USD"
+                            },
+                            "quantity": {
+                                "type": ["integer", "null"],
+                                "description": "Quantity of the SIM package",
+                                "example": 6
+                            },
+                            "type": {
+                                "type": ["string", "null"],
+                                "description": "Type of the SIM package",
+                                "example": "null"
+                            },
+                            "description": {
+                                "type": ["string", "null"],
+                                "description": "Description of the SIM package",
+                                "example": "null"
+                            },
+                            "esim_type": {
+                                "type": "string",
+                                "description": "Type of the eSIM package",
+                                "example": "Prepaid"
+                            },
+                            "validity": {
+                                "type": "string",
+                                "description": "Validity of the SIM package",
+                                "example": "7"
+                            },
+                            "package": {
+                                "type": "string",
+                                "description": "Name of the SIM package",
+                                "example": "Merhaba-1 GB - 7 Days"
+                            },
+                            "data": {
+                                "type": "string",
+                                "description": "Data of the SIM package",
+                                "example": "1 GB"
+                            },
+                            "price": {
+                                "type": "string",
+                                "description": "Price of the SIM package",
+                                "example": "4.5"
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "description": "Creation date of the SIM package",
+                                "example": "2025-05-06 22:59:26"
+                            },
+                            "manual_installation": {
+                                "type": "string",
+                                "description": "Manual installation instructions for the SIM package",
+                                "example": "<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To manually activate the eSIM on your eSIM capable device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Manually enter the SM-DP+ Address and activation code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol>"
+                            },
+                            "qrcode_installation": {
+                                "type": "string",
+                                "description": "QR code installation instructions for the SIM package",
+                                "example": "<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To activate the eSIM by scanning the QR code on your eSIM capable device you need to print or display this QR code on another device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Scan QR code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol>"
+                            },
+                            "installation_guides": {
+                                "type": "object",
+                                "description": "Installation guides for the SIM package",
+                                "properties": {
+                                    "en": {
+                                        "type": "string",
+                                        "description": "Installation guide URL in English",
+                                        "example": "https://www.airalo.com/help/getting-started-with-airalo"
+                                    }
+                                }
+                            },
+                            "text": {
+                                "type": ["string", "null"],
+                                "description": "Text instructions for the SIM package",
+                                "example": "null"
+                            },
+                            "voice": {
+                                "type": ["string", "null"],
+                                "description": "Voice instructions for the SIM package",
+                                "example": "null"
+                            },
+                            "net_price": {
+                                "type": "number",
+                                "description": "Net price of the SIM package",
+                                "example": 3.6
+                            },
+                            "status": {
+                                "type": "object",
+                                "description": "Status of the SIM package",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "Name of the status",
+                                        "example": "Completed"
+                                    },
+                                    "slug": {
+                                        "type": "string",
+                                        "description": "Slug of the status",
+                                        "example": "completed"
+                                    }
+                                }
+                            },
+                            "user": {
+                                "type": "object",
+                                "description": "User details for the SIM package",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "description": "ID of the user",
+                                        "example": 1051
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "description": "Name of the user",
+                                        "example": "QA Test"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "description": "Email of the user",
+                                        "example": "qa@airalo.com"
+            
+                        }
+                    }
+                }
+            }
+        }
+                   
+                }
+            }
+        },
+        "links": {
+            "type": "object",
+            "description": "Links for pagination",
+            "properties": {
+                "first": {
+                    "type": "string",
+                    "description": "First page link",
+                    "example": "https://sandbox-partners-api.airalo.com/v2/sims?include=order%2Corder.status%2Corder.user&limit=6&page=1"
+                },
+                "last": {
+                    "type": "string",
+                    "description": "Last page link",
+                    "example": "https://sandbox-partners-api.airalo.com/v2/sims?include=order%2Corder.status%2Corder.user&limit=6&page=1897"
+                },
+                "prev": {
+                    "type": ["string", "null"],
+                    "description": "Previous page link",
+                    "example": "null"
+                },
+                "next": {
+                    "type": ["string", "null"],
+                    "description": "Next page link",
+                    "example": "null"
+                }
+            }
+        },
+        "meta": {
+            "type": "object",
+            "description": "Meta information for pagination",
+            "properties": {
+                "message": {
+                    "type": "string",
+                    "description": "Response message",
+                    "example": "success"
+                },
+                "current_page": {
+                    "type": "integer",
+                    "description": "Current page number",
+                    "example": 1
+                },
+                "from": {
+                    "type": "integer",
+                    "description": "Starting index of the current page",
+                    "example": 1
+                },
+                "last_page": {
+                    "type": "integer",
+                    "description": "Last page number",
+                    "example": 1897
+                },
+                "path": {
+                    "type": "string",
+                    "description": "Base path for pagination links",
+                    "example": "https://sandbox-partners-api.airalo.com/v2/sims"
+                },
+                "per_page": {
+                    "type": ["string", "null"],
+                    "description": "null",
+                    "example": "null"
+                },
+                "to": {
+                    "type": ["integer", "null"],
+                    "description": "null",
+                    "example": "null"
+                },
+                "total": {
+                    "type": ["integer", "null"],
+                    "description": "null",
+                    "example": "null"
+                }
+            }
+        }
+    }
+}
