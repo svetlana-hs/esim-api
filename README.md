@@ -12,23 +12,23 @@ Before running, add client_id and client_secret for authentication to pytest.ini
 ```sh
 .env/bin/python -m pytest --color=yes --tb=short
 ```
-Environment from pytest.ini is used by default, for running with another environment, use the flag
+The environment from pytest.ini is used by default. For running in another environment, use the flag
 ```sh
 pytest -c pytest.stage.ini
 ```
-where pytest.stage.ini - file with environment configuration.
+where pytest.stage.ini - a file with environment configuration.
 
 ## Project description
-There is a test, which automates a real scenario:
+There is a test which automates a real scenario:
 1. submitting an order via POST /orders method
 2. validating a response
-3. retrieving eSIMs list
+3. retrieving eSIMs list via GET /sims method
 4. validating a response
 
-The structure of testing framework is following:
-- "tests" contains test file test_api.py with the test scenario
-- "utils" contains client for calling API and validator for validation responses via JSON Schema
+The structure of the testing framework is as follows:
+- "tests" contains the test file test_api.py with the test scenario
+- "utils" contains a client for calling the API and a validator for validating responses via JSON Schema
 - "config.py" obtains the variables from pytest.ini
 - "pytest.ini" contains env variables
-- "conftest.py" contains fixtures for test
-- "requirements.txt" contains list of required python packages
+- "conftest.py" contains fixtures for the test
+- "requirements.txt" contains the list of required Python packages
